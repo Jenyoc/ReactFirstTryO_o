@@ -19,6 +19,7 @@ class LeftList extends Component {
   clickByElement(event){
     const element=this.state.sources.find(el=> el.id === parseInt(event.target.dataset.index));
     this.props.addElement(element);
+    this.setState(this.state.sources=this.state.sources.filter(el=> el.id !== parseInt(event.target.dataset.index)))
   }
 
   render(){
