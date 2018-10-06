@@ -1,0 +1,22 @@
+#app{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.itemsBox{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 40%;
+  height: auto;
+}
+
+.sourceBlock{
+  padding: 5px;
+  margin: 5px;
+  background: gray;
+  border-radius: 5px;
+  color: white;
+}
