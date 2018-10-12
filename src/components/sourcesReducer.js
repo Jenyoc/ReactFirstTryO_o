@@ -1,13 +1,13 @@
 const initialState ={
-  elements:[]
+  list:[]
 };
 
-const elementsReducer = (state=initialState, action)=>{
+const listReducer = (state = initialState, action)=>{
   switch (action.type) {
     case "@@list/ELEMENT_ADD": {
       return {
         ...state,
-        elements:action.payload.elements
+        list: state.list.concat(action.payload.element)
       }
     }
     default:{
@@ -16,4 +16,4 @@ const elementsReducer = (state=initialState, action)=>{
   }
 };
 
-export default elementsReducer;
+export default listReducer;
