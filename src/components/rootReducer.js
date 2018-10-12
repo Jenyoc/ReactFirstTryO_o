@@ -1,11 +1,11 @@
 import {combineReducers} from 'redux';
 
-import elementsReducer from './elementsReducer';
+import sourcesReducer from './sourcesReducer';
 import listReducer from './listReducer';
 
 const rootReducer= combineReducers({
     list: listReducer,
-    elements:elementsReducer
+    sources:sourcesReducer
   });
 
 export default rootReducer;

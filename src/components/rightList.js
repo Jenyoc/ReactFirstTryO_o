@@ -1,7 +1,7 @@
 import React from "react";
 import  withViewList from './rightListWrapper'
 
-const RightList=(props)=>{
+const RightList=(props)=> {
       return(
         <div className="rightList itemsBox">
           {

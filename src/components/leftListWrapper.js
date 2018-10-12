@@ -2,23 +2,34 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
-import {addElementAction} from './addElementAction';
+import {addElement} from './addElementAction';
+import {getElementsJSON} from "./addElementAction"
+
+import store from "./store";
 
 const withAddElement=Component=>{
   const WrappedComponent = props=>{
-    return <Component addElement={props.addElement}/>
+    return <Component sources={props.sources} addElement={props.addElement} getElementsJSON={props.getElementsJSON}/>
   };
+
 
   const mapDispatchToProps = dispatch =>
     bindActionCreators({
-      addElement: addElementAction
+      addElement: addElement,
+        getElementsJSON:getElementsJSON
     },
       dispatch
     );
+  const mapStateToProps = (state) => {
+      return {
+      sources: state.sources
+      };
+  };
+
   return connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps
-  )(WrappedComponent)
+  )(WrappedComponent);
 };
 
 export default withAddElement;

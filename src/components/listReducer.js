@@ -2,7 +2,7 @@ const initialState ={
   list:[]
 };
 
-const listReducer = (state=initialState, action)=>{
+const listReducer = (state = initialState, action)=>{
   switch (action.type) {
     case "@@list/ELEMENT_ADD": {
       return {

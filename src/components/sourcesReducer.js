@@ -1,13 +1,13 @@
 const initialState ={
-  list:[]
+  sources:[]
 };
 
-const listReducer = (state = initialState, action)=>{
+const sourcesReducer = (state = initialState, action)=>{
   switch (action.type) {
-    case "@@list/ELEMENT_ADD": {
+    case "@@sources/ELEMENTS_GET": {
       return {
         ...state,
-        list: state.list.concat(action.payload.element)
+        sources: state.sources.concat(action.payload.sources)
       }
     }
     default:{
@@ -16,4 +16,4 @@ const listReducer = (state = initialState, action)=>{
   }
 };
 
-export default listReducer;
+export default sourcesReducer;
